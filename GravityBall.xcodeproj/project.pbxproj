@@ -17,6 +17,9 @@
 		805C42E91BBE9B27006BB4B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 805C42E71BBE9B27006BB4B3 /* LaunchScreen.storyboard */; };
 		805C42F11BBEA473006BB4B3 /* BalloonSpawner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805C42F01BBEA473006BB4B3 /* BalloonSpawner.swift */; settings = {ASSET_TAGS = (); }; };
 		805C42F31BBEA859006BB4B3 /* CollisionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805C42F21BBEA859006BB4B3 /* CollisionDetector.swift */; settings = {ASSET_TAGS = (); }; };
+		80C8CB901BC30A7200554C36 /* ExplosionAtlas.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 80C8CB8E1BC30A7200554C36 /* ExplosionAtlas.1.png */; settings = {ASSET_TAGS = (); }; };
+		80C8CB911BC30A7200554C36 /* ExplosionAtlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80C8CB8F1BC30A7200554C36 /* ExplosionAtlas.plist */; settings = {ASSET_TAGS = (); }; };
+		80C8CB931BC30A7E00554C36 /* ExplosionAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8CB921BC30A7E00554C36 /* ExplosionAtlas.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		805C42EA1BBE9B27006BB4B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		805C42F01BBEA473006BB4B3 /* BalloonSpawner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonSpawner.swift; sourceTree = "<group>"; };
 		805C42F21BBEA859006BB4B3 /* CollisionDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionDetector.swift; sourceTree = "<group>"; };
+		80C8CB8E1BC30A7200554C36 /* ExplosionAtlas.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ExplosionAtlas.1.png; sourceTree = "<group>"; };
+		80C8CB8F1BC30A7200554C36 /* ExplosionAtlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ExplosionAtlas.plist; sourceTree = "<group>"; };
+		80C8CB921BC30A7E00554C36 /* ExplosionAtlas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplosionAtlas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,8 @@
 		805C42D91BBE9B26006BB4B3 /* GravityBall */ = {
 			isa = PBXGroup;
 			children = (
+				80C8CB921BC30A7E00554C36 /* ExplosionAtlas.swift */,
+				80C8CB8D1BC30A7200554C36 /* ExplosionAtlas.atlasc */,
 				805C42DA1BBE9B26006BB4B3 /* AppDelegate.swift */,
 				805C42DC1BBE9B26006BB4B3 /* GameScene.sks */,
 				805C42DE1BBE9B26006BB4B3 /* GameScene.swift */,
@@ -77,6 +85,15 @@
 				8003CEFC1BC3008300950DA4 /* Ball.swift */,
 			);
 			path = GravityBall;
+			sourceTree = "<group>";
+		};
+		80C8CB8D1BC30A7200554C36 /* ExplosionAtlas.atlasc */ = {
+			isa = PBXGroup;
+			children = (
+				80C8CB8E1BC30A7200554C36 /* ExplosionAtlas.1.png */,
+				80C8CB8F1BC30A7200554C36 /* ExplosionAtlas.plist */,
+			);
+			path = ExplosionAtlas.atlasc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +153,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80C8CB901BC30A7200554C36 /* ExplosionAtlas.1.png in Resources */,
 				805C42DD1BBE9B26006BB4B3 /* GameScene.sks in Resources */,
+				80C8CB911BC30A7200554C36 /* ExplosionAtlas.plist in Resources */,
 				805C42E91BBE9B27006BB4B3 /* LaunchScreen.storyboard in Resources */,
 				805C42E61BBE9B27006BB4B3 /* Assets.xcassets in Resources */,
 				805C42E41BBE9B27006BB4B3 /* Main.storyboard in Resources */,
@@ -155,6 +174,7 @@
 				805C42DF1BBE9B26006BB4B3 /* GameScene.swift in Sources */,
 				805C42E11BBE9B26006BB4B3 /* GameViewController.swift in Sources */,
 				805C42F11BBEA473006BB4B3 /* BalloonSpawner.swift in Sources */,
+				80C8CB931BC30A7E00554C36 /* ExplosionAtlas.swift in Sources */,
 				805C42DB1BBE9B26006BB4B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -35,12 +35,15 @@ class GameScene: SKScene {
         motionManager.startAccelerometerUpdates()
     }
     
+    let explosion = ExplosionAtlas()
+    
     func enemyHit(enemyNode:SKNode,heroNode:SKNode) {
         enemyNode.physicsBody?.dynamic = false
         enemyNode.physicsBody?.categoryBitMask = 0
         enemyNode.name = ""
+        enemyNode.physicsBody?.fieldBitMask = 0
         
-        let expl = SKAction.scaleBy(0.1, duration:0.2)
+        let expl = SKAction.animateWithTextures(explosion.expl_01_(), timePerFrame: 0.05)
         let enemySprite = enemyNode as! SKSpriteNode
         enemySprite.runAction(expl, completion: { () -> Void in
             enemyNode.removeFromParent()

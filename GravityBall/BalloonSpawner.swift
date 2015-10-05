@@ -35,8 +35,8 @@ class BalloonSpawner {
         
         sp.physicsBody = SKPhysicsBody( texture: spTexture, size: sp.size)
         sp.physicsBody!.friction = 0.5//objectPhysics!.friction
-        sp.physicsBody!.restitution = 0.4
-        sp.physicsBody!.mass = 0
+        sp.physicsBody!.restitution = 0.8
+        sp.physicsBody!.mass = 5
         sp.physicsBody!.allowsRotation = true
         sp.physicsBody!.dynamic = true
         sp.physicsBody?.categoryBitMask = 2
@@ -48,13 +48,13 @@ class BalloonSpawner {
         parentNode?.addChild(sp)
         
         let w = sp.size.width
-        let h = sp.size.height
         let diceX = arc4random_uniform(UInt32(sp.parent!.frame.size.width-2*w))+UInt32(w)
-        let diceY = arc4random_uniform(UInt32(sp.parent!.frame.size.height-2*h))+UInt32(h)
+        let yPos = 100
         
-        
-        let startPos = CGPointMake(CGFloat(diceX),CGFloat(diceY))
+        let startPos = CGPointMake(CGFloat(diceX),CGFloat(yPos))
         sp.position = startPos
+        
+        sp.physicsBody?.applyImpulse(CGVectorMake(0, 100))
 
 
     }
