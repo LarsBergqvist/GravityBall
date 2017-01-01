@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8003CEFD1BC3008300950DA4 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8003CEFC1BC3008300950DA4 /* Ball.swift */; settings = {ASSET_TAGS = (); }; };
+		8003CEFD1BC3008300950DA4 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8003CEFC1BC3008300950DA4 /* Ball.swift */; };
 		805C42DB1BBE9B26006BB4B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805C42DA1BBE9B26006BB4B3 /* AppDelegate.swift */; };
 		805C42DD1BBE9B26006BB4B3 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 805C42DC1BBE9B26006BB4B3 /* GameScene.sks */; };
 		805C42DF1BBE9B26006BB4B3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805C42DE1BBE9B26006BB4B3 /* GameScene.swift */; };
@@ -15,11 +15,11 @@
 		805C42E41BBE9B27006BB4B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 805C42E21BBE9B27006BB4B3 /* Main.storyboard */; };
 		805C42E61BBE9B27006BB4B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 805C42E51BBE9B27006BB4B3 /* Assets.xcassets */; };
 		805C42E91BBE9B27006BB4B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 805C42E71BBE9B27006BB4B3 /* LaunchScreen.storyboard */; };
-		805C42F11BBEA473006BB4B3 /* BalloonSpawner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805C42F01BBEA473006BB4B3 /* BalloonSpawner.swift */; settings = {ASSET_TAGS = (); }; };
-		805C42F31BBEA859006BB4B3 /* CollisionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805C42F21BBEA859006BB4B3 /* CollisionDetector.swift */; settings = {ASSET_TAGS = (); }; };
-		80C8CB901BC30A7200554C36 /* ExplosionAtlas.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 80C8CB8E1BC30A7200554C36 /* ExplosionAtlas.1.png */; settings = {ASSET_TAGS = (); }; };
-		80C8CB911BC30A7200554C36 /* ExplosionAtlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80C8CB8F1BC30A7200554C36 /* ExplosionAtlas.plist */; settings = {ASSET_TAGS = (); }; };
-		80C8CB931BC30A7E00554C36 /* ExplosionAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8CB921BC30A7E00554C36 /* ExplosionAtlas.swift */; settings = {ASSET_TAGS = (); }; };
+		805C42F11BBEA473006BB4B3 /* BalloonSpawner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805C42F01BBEA473006BB4B3 /* BalloonSpawner.swift */; };
+		805C42F31BBEA859006BB4B3 /* CollisionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805C42F21BBEA859006BB4B3 /* CollisionDetector.swift */; };
+		80C8CB901BC30A7200554C36 /* ExplosionAtlas.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 80C8CB8E1BC30A7200554C36 /* ExplosionAtlas.1.png */; };
+		80C8CB911BC30A7200554C36 /* ExplosionAtlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80C8CB8F1BC30A7200554C36 /* ExplosionAtlas.plist */; };
+		80C8CB931BC30A7E00554C36 /* ExplosionAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8CB921BC30A7E00554C36 /* ExplosionAtlas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,11 +122,12 @@
 		805C42CF1BBE9B26006BB4B3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Lars Bergqvist";
 				TargetAttributes = {
 					805C42D61BBE9B26006BB4B3 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -214,8 +215,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -259,8 +262,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -279,6 +284,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -292,6 +298,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.LB.GravityBall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -303,6 +310,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.LB.GravityBall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

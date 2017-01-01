@@ -38,7 +38,7 @@ class BalloonSpawner {
         sp.physicsBody!.restitution = 0.8
         sp.physicsBody!.mass = 5
         sp.physicsBody!.allowsRotation = true
-        sp.physicsBody!.dynamic = true
+        sp.physicsBody!.isDynamic = true
         sp.physicsBody?.categoryBitMask = 2
         sp.physicsBody?.collisionBitMask = 1
         sp.physicsBody?.contactTestBitMask = 1
@@ -51,10 +51,10 @@ class BalloonSpawner {
         let diceX = arc4random_uniform(UInt32(sp.parent!.frame.size.width-2*w))+UInt32(w)
         let yPos = 100
         
-        let startPos = CGPointMake(CGFloat(diceX),CGFloat(yPos))
+        let startPos = CGPoint(x: CGFloat(diceX),y: CGFloat(yPos))
         sp.position = startPos
         
-        sp.physicsBody?.applyImpulse(CGVectorMake(0, 100))
+        sp.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 100))
 
 
     }

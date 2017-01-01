@@ -15,11 +15,11 @@ class GameScene: SKScene {
     var balloonSpawner:BalloonSpawner?
     var collisionDetector:CollisionDetector?
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         /* Setup your scene here */
         
         self.physicsWorld.gravity = gravVector
-        let physicsBody = SKPhysicsBody (edgeLoopFromRect: self.frame)
+        let physicsBody = SKPhysicsBody (edgeLoopFrom: self.frame)
         self.physicsBody = physicsBody
         self.name = "edge"
         collisionDetector = CollisionDetector(g:enemyHit)
@@ -37,15 +37,15 @@ class GameScene: SKScene {
     
     let explosion = ExplosionAtlas()
     
-    func enemyHit(enemyNode:SKNode,heroNode:SKNode) {
-        enemyNode.physicsBody?.dynamic = false
+    func enemyHit(_ enemyNode:SKNode,heroNode:SKNode) {
+        enemyNode.physicsBody?.isDynamic = false
         enemyNode.physicsBody?.categoryBitMask = 0
         enemyNode.name = ""
         enemyNode.physicsBody?.fieldBitMask = 0
         
-        let expl = SKAction.animateWithTextures(explosion.expl_01_(), timePerFrame: 0.05)
+        let expl = SKAction.animate(with: explosion.expl_01_(), timePerFrame: 0.05)
         let enemySprite = enemyNode as! SKSpriteNode
-        enemySprite.runAction(expl, completion: { () -> Void in
+        enemySprite.run(expl, completion: { () -> Void in
             enemyNode.removeFromParent()
             
         })
@@ -56,23 +56,23 @@ class GameScene: SKScene {
     }
     
 
-    var gravVector:CGVector = CGVectorMake(0,-9.8)
+    var gravVector:CGVector = CGVector(dx: 0,dy: -9.8)
     let motionManager: CMMotionManager = CMMotionManager()
 
     let gravFactor:CGFloat = 30.0
-    func processUserMotionForUpdate(currentTime: CFTimeInterval) {
+    func processUserMotionForUpdate(_ currentTime: CFTimeInterval) {
         if let data = motionManager.accelerometerData {
             
             let x = CGFloat(data.acceleration.x)*gravFactor
             let y = CGFloat(data.acceleration.y)*gravFactor
             
-            gravVector = CGVectorMake(x,y)
+            gravVector = CGVector(dx: x,dy: y)
         }
     }
     
     func spawnNewIfEmpty() {
         var balloonExists = false
-        self.enumerateChildNodesWithName("*") {
+        self.enumerateChildNodes(withName: "*") {
             node,stop in
             if let name = node.name {
                 if (name == "balloon") {
@@ -86,7 +86,7 @@ class GameScene: SKScene {
         }
 
     }
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
         processUserMotionForUpdate(currentTime)
         

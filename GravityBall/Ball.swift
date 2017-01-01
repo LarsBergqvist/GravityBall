@@ -23,7 +23,7 @@ class Ball {
         sprite.physicsBody!.restitution = 0.4
         sprite.physicsBody!.mass = 3
         sprite.physicsBody!.allowsRotation = true
-        sprite.physicsBody!.dynamic = true
+        sprite.physicsBody!.isDynamic = true
         sprite.physicsBody?.categoryBitMask = 1
         sprite.physicsBody?.collisionBitMask = 2
         sprite.physicsBody?.contactTestBitMask = 2

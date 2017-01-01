@@ -7,11 +7,11 @@ class CollisionDetector : NSObject, SKPhysicsContactDelegate {
     
     var enemyHitHandler : EnemyHitHandler?
     
-    init(g:EnemyHitHandler) {
+    init(g:@escaping EnemyHitHandler) {
         enemyHitHandler = g
     }
     
-    func didBeginContact(contact:SKPhysicsContact){
+    func didBegin(_ contact:SKPhysicsContact){
         if (contact.bodyA.node != nil && contact.bodyB.node != nil)  {
             let node2:SKNode = contact.bodyB.node!
             let node1:SKNode = contact.bodyA.node!
